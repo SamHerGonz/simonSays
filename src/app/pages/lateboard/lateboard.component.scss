@@ -1,0 +1,77 @@
+button {
+    position: absolute;
+    background-color: rgb(255, 188, 188);
+    background-color: rgb(187, 193, 244);
+    border: 3px solid rgb(205, 209, 248);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    transition: 0.1s;
+}
+
+button:hover {
+    background-color: rgb(255, 188, 188);
+}
+
+button:active {
+    background-color: rgb(215, 158, 158);;
+    border: 3px solid rgb(177, 181, 214);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    transition: all 0.1s;
+}
+
+.buttonlevel {
+    top: 5%;
+}
+
+#buttonA {
+    left: 1%;
+}
+
+#buttonB {
+    left: 6%;
+}
+
+#buttonC {
+    left: 11%;
+}
+
+#backButton {
+    top: 1%;
+    right: 1%;
+    width: 5em;
+    height: 5em;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#backButton:hover {
+    background-color: rgb(255, 188, 188);
+    width: 5.1em;
+    height: 5.1em;
+}
+
+#backButton:active {
+    background-color: rgb(215, 158, 158);;
+    border: 3px solid rgb(177, 181, 214);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    transition: all 0.1s;
+}
+
+table {
+    position: absolute;
+    top: 15%;
+    width: 90%;
+}
+table, td {
+    border: solid black 3px;
+    border-collapse: collapse;
+}
+th {
+    background-color: antiquewhite;
+    border: solid antiquewhite 3px;
+}

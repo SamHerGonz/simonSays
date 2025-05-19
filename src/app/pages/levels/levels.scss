@@ -1,0 +1,37 @@
+.completed {
+    background-color: greenyellow !important;
+    transform: rotate(0deg);
+    animation-name: prueba;
+    animation-duration: 0.9s;
+    animation-timing-function: linear; /* Movimiento uniforme */
+    animation-iteration-count: 1; /* Se ejecuta una sola vez */
+
+}
+
+#round {
+    position: absolute;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 3em;
+    height: 3em;
+    border-radius: 5%;
+    background-color: rgb(52, 52, 52);
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}
+
+@keyframes prueba {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

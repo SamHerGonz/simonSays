@@ -1,0 +1,70 @@
+app-buttons, div:not(#round) {
+    position: absolute;
+    width: 35%;
+    height: 35%;
+    transition: 0.1s;
+}
+
+app-buttons:active:not(.block), .lighted {
+    width: 37%;
+    height: 37%;
+}
+
+app-buttons:active:not(.block) {
+    width: 35%;
+    height: 35%;
+    transition: 0.1s;
+}
+
+app-buttons:active:not(.block):active {
+    width: 37%;
+    height: 37%;
+}
+
+#colRed {
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 300px;
+    background-color: rgb(88, 88, 88);
+    background-image: linear-gradient(135deg, rgb(88, 88, 88), rgb(88, 88, 88));
+}
+
+#colRed:active {
+    background-image: linear-gradient(135deg, rgb(126, 126, 126), rgb(88, 88, 88));
+}
+
+#colBlue {
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 300px;
+    background-color: rgb(88, 88, 88);
+    background-image: linear-gradient(225deg, rgb(88, 88, 88), rgb(88, 88, 88));
+}
+
+#colBlue:active {
+    background-image: linear-gradient(225deg, rgb(126, 126, 126), rgb(88, 88, 88));
+}
+
+#colYellow {
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 300px;
+    background-color: rgb(88, 88, 88);
+    background-image: linear-gradient(45deg, rgb(148, 148, 148), rgb(148, 148, 148));
+}
+
+#colYellow:active {
+    background-image: linear-gradient(45deg, rgb(126, 126, 126), rgb(88, 88, 88));
+}
+
+#colGreen {
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 300px;
+    background-color: rgb(88, 88, 88);
+    background-image: linear-gradient(270deg, rgb(88, 88, 88), rgb(88, 88, 88));
+}
+
+#colGreen:active {
+    background-image: linear-gradient(270deg, rgb(126, 126, 126), rgb(88, 88, 88));
+}

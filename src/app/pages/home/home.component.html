@@ -1,0 +1,11 @@
+<div id="divTop">
+    <h1>Hello <u><i>{{user}}{{level}}</i></u></h1>
+    <input type="text" [(ngModel)]="user" minlength="3" maxlength="18"> <!-- For now, the minimum doesn't work, I think it will solve itself in the future--> 
+</div>
+<div id="mainGame">
+  <p><i class="arrow left" (click)="gotoLevelLeft()"></i></p>    
+  <button (click)="play()" id="b1">Play</button>
+  <p><i class="arrow right" (click)="gotoLevelRight()"></i></p>
+  <button (click)="options()" id="b2">Options</button>
+  <button (click)="lateboard()" id="b3">Lateboard</button>
+</div>

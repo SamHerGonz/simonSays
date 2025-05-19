@@ -1,0 +1,123 @@
+app-buttons, div:not(#round) {
+    position: absolute;
+    width: 22.5%;
+    height: 22.5%;
+    transition: 0.1s;
+}
+
+app-buttons:active:not(.block), .lighted {
+    width: 25%;
+    height: 25%;
+}
+
+.block {
+    background-color: gray;
+}
+
+#block1 {
+    top: 0;
+    left: 0;
+}
+
+#block2 {
+    top: 0;
+    right: 0;
+}
+
+#block3 {
+    bottom: 0;
+    left: 0;
+}
+
+#block4 {
+    bottom: 0;
+    right: 0;
+}
+
+#colRed {
+    top: 0;
+    left: 22.5%;
+    border-bottom-right-radius: 300px;
+    background-image: linear-gradient(135deg, red, rgb(255, 57, 57));
+}
+
+#colRed:active {
+    background-image: linear-gradient(135deg, red, rgb(237, 0, 0));
+}
+
+#colOrange {
+    top: 22.5%;
+    left: 0;
+    border-bottom-right-radius: 300px;
+    background-image: linear-gradient(135deg, orange, rgb(255, 182, 46));
+}
+
+#colOrange:active {
+    background-image: linear-gradient(135deg, orange, rgb(213, 151, 36));
+}
+
+#colBlue {
+    top: 22.5%;
+    right: 0;
+    border-bottom-left-radius: 300px;
+    background-image: linear-gradient(225deg, blue, rgb(88, 88, 255));
+}
+
+#colBlue:active {
+    background-image: linear-gradient(225deg, blue, rgb(0, 0, 215));
+}
+
+#colPurple {
+    top: 0;
+    right: 22.5%;
+    border-bottom-left-radius: 300px;
+    background-image: linear-gradient(225deg, purple, rgb(241, 88, 255));
+}
+
+#colPurple:active {
+    background-image: linear-gradient(225deg, purple, rgb(140, 32, 150));
+}
+
+#colYellow {
+    bottom: 22.5%;
+    left: 0;
+    border-top-right-radius: 300px;
+    background-image: linear-gradient(45deg, yellow, rgb(255, 255, 34));
+}
+
+#colYellow:active {
+    background-image: linear-gradient(45deg, yellow, rgb(232, 232, 0));
+}
+
+#colLime {
+    bottom: 0;
+    left: 22.5%;
+    border-top-right-radius: 300px;
+    background-image: linear-gradient(45deg, lime, rgb(76, 255, 56));
+}
+
+#colLime:active {
+    background-image: linear-gradient(45deg, lime, rgb(50, 168, 37));
+}
+
+#colGreen {
+    bottom: 0;
+    right: 22.5%;
+    border-top-left-radius: 300px;
+    background-image: linear-gradient(270deg, green, rgb(34, 128, 34));
+}
+
+#colGreen:active {
+    background-image: linear-gradient(270deg, green, rgb(0, 105, 0));
+}
+
+#colPalegreen {
+    bottom: 22.5%;
+    right: 0;
+    border-top-left-radius: 300px;
+    background-image: linear-gradient(270deg, palegreen, rgb(222, 255, 222));
+}
+
+#colPalegreen:active {
+    background-image: linear-gradient(270deg, rgb(131, 212, 131), rgb(164, 181, 164));
+}

@@ -1,0 +1,17 @@
+<div>
+    <p><b>YOU LOST</b>, YOUR SCORE WAS {{round}}</p>
+</div>
+<button (click)="restart()" id="restartButton">Restart</button>
+<button (click)="home()" id="backButton">Back</button>
+<table>
+    <tr>
+        <th>Users:</th>
+        <th>Points:</th>
+    </tr>
+    @for (user of users; track user) {
+        <tr>
+            <td>{{ user }}</td>
+            <td>{{rounds[$index]}}</td>
+        </tr>
+    }
+</table>

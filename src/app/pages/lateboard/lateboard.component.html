@@ -1,0 +1,18 @@
+<button (click)="home()" id="backButton">Back</button>
+
+<button class="buttonlevel" id="buttonA" (click)="showLevel(1)">Level 1</button>
+<button class="buttonlevel" id="buttonB" (click)="showLevel(2)">Level 2</button>
+<button class="buttonlevel" id="buttonC" (click)="showLevel(3)">Level 3</button>
+
+<table>
+    <tr>
+        <th>Users:</th>
+        <th>Points:</th>
+    </tr>
+    @for (user of users; track user) {
+        <tr>
+            <td>{{ user }}</td>
+            <td>{{rounds[$index]}}</td>
+        </tr>
+    }
+</table>

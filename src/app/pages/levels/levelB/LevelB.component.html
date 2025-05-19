@@ -1,0 +1,13 @@
+<app-buttons id="colRed" #colRed [colour]="colours[0]" (click)="verifyColour(colours[0])" [ngClass]="{'lighted': button1.isLighted}" class="lighted"></app-buttons>
+<app-buttons id="colOrange" #colOrange [colour]="colours[1]" (click)="verifyColour(colours[1])" [ngClass]="{'lighted': button2.isLighted}" class="lighted"></app-buttons>
+<div class="block" id="block1"></div>
+<app-buttons id="colBlue" #colBlue [colour]="colours[2]" (click)="verifyColour(colours[2])" [ngClass]="{'lighted': button3.isLighted}" class="lighted"></app-buttons>
+<app-buttons id="colPurple" #colPurple [colour]="colours[3]" (click)="verifyColour(colours[3])" [ngClass]="{'lighted': button4.isLighted}" class="lighted"></app-buttons>
+<div class="block" id="block2"></div>
+<app-buttons id="colYellow" #colYellow [colour]="colours[4]" (click)="verifyColour(colours[4])" [ngClass]="{'lighted': button5.isLighted}" class="lighted"></app-buttons>
+<app-buttons id="colLime" #colLime [colour]="colours[5]" (click)="verifyColour(colours[5])" [ngClass]="{'lighted': button6.isLighted}" class="lighted"></app-buttons>
+<div class="block" id="block3"></div>
+<app-buttons id="colGreen" #colGreen [colour]="colours[6]" (click)="verifyColour(colours[6])" [ngClass]="{'lighted': button7.isLighted}" class="lighted"></app-buttons>
+<app-buttons id="colPalegreen" #colPalegreen [colour]="colours[7]" (click)="verifyColour(colours[7])" [ngClass]="{'lighted': button8.isLighted}" class="lighted"></app-buttons>
+<div class="block" id="block4"></div>
+<div id="round" [ngClass]="{'completed': isComplete}" class="completed">{{round}}</div>

@@ -1,0 +1,5 @@
+<app-buttons id="colRed" #colRed [colour]="colours[0]" (click)="verifyColour(colours[0])" [ngClass]="{'lighted': buttonRed.isLighted}" class="lighted"></app-buttons>
+<app-buttons id="colBlue" #colBlue [colour]="colours[1]" (click)="verifyColour(colours[1])" [ngClass]="{'lighted': buttonBlue.isLighted}" class="lighted"></app-buttons>
+<app-buttons id="colYellow" #colYellow [colour]="colours[2]" (click)="verifyColour(colours[2])" [ngClass]="{'lighted': buttonYellow.isLighted}" class="lighted"></app-buttons>
+<app-buttons id="colGreen" #colGreen [colour]="colours[3]" (click)="verifyColour(colours[3])" [ngClass]="{'lighted': buttonGreen.isLighted}" class="lighted"></app-buttons>
+<div id="round" [ngClass]="{'completed': isComplete}" class="completed">{{round}}</div>
