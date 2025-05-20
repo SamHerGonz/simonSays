@@ -11,13 +11,11 @@ import { Router } from '@angular/router';
 })
 export class LateboardComponent {
   private router = inject(Router);
-  private gameService = inject(GameService);
-  rounds: number[] = [];
-  users: string[] = [];
+  gameService = inject(GameService);
+  n: number = 1;
 
   public showLevel(level: number): void {
-    this.rounds = this.gameService.getLateboardRound(level);
-    console.log(this.rounds)
+    this.n = level
   }
 
   public home(): void {

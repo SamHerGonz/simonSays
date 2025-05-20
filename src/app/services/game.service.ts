@@ -38,11 +38,15 @@ export class GameService {
   }
 
   getLateboardRound(level: number): number[] {
-    return this.lateboardRound[level - 1]
+    return this.lateboardRound[level - 1];
   }
 
   getLateboardUser(level: number): string[] {
-    return this.lateboardUser[level - 1]
+    return this.lateboardUser[level - 1];
+  }
+
+  getAllLateboardUsers(): string[][] {
+    return this.lateboardUser;
   }
 
   public addGame() {

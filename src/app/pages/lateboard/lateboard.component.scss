@@ -1,5 +1,4 @@
 button {
-    position: absolute;
     background-color: rgb(255, 188, 188);
     background-color: rgb(187, 193, 244);
     border: 3px solid rgb(205, 209, 248);
@@ -23,23 +22,15 @@ button:active {
     transition: all 0.1s;
 }
 
-.buttonlevel {
+#level {
+    position: absolute;
+    display: flex;
     top: 5%;
-}
-
-#buttonA {
-    left: 1%;
-}
-
-#buttonB {
-    left: 6%;
-}
-
-#buttonC {
-    left: 11%;
+    gap: 12px;
 }
 
 #backButton {
+    position: absolute;
     top: 1%;
     right: 1%;
     width: 5em;
