@@ -16,11 +16,11 @@ export class ButtonsComponent {
   public static restart(): void {
     ButtonsComponent.time = 300;
   }
-  setColour(colour: string) {
+  public setColour(colour: string) {
     this.colour = colour;
   }
 
-  light() {
+  public light() {
     this.isLighted = true;
     setTimeout(() => {
       this.isLighted = false;

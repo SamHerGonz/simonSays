@@ -15,12 +15,12 @@ export class LateboardComponent {
   rounds: number[] = [];
   users: string[] = [];
 
-  showLevel(level: number): void {
+  public showLevel(level: number): void {
     this.rounds = this.gameService.getLateboardRound(level);
     console.log(this.rounds)
   }
 
-  home(): void {
+  public home(): void {
     this.router.navigate([''])
   }
 }

@@ -8,8 +8,8 @@ export class GameService {
   private round: number = 0;
   private level: number = 1;
 
-  private lateboardUser: string[][] = [[],[],[]];
-  private lateboardRound: number[][] = [[],[],[]];
+  private lateboardUser: string[][] = [[],[],[],[]];
+  private lateboardRound: number[][] = [[],[],[],[]];
 
   constructor() {}
 

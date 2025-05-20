@@ -33,7 +33,7 @@ export class LevelCComponent {
   maxtime = 150;
   isComplete: boolean = false;
 
-  startRound():void {
+  public startRound():void {
     this.round++;
     this.playerChose = [];
     setTimeout(() => {
@@ -47,7 +47,7 @@ export class LevelCComponent {
     this.chose.push(this.colours[Math.floor(Math.random() * this.colours.length)]);
   }
   
-  showColours():void {
+  private showColours():void {
     this.chose.forEach ((element, index) => {
       setTimeout(() => {
         if (element === this.buttonRed.colour) {
@@ -75,7 +75,7 @@ export class LevelCComponent {
     }
   }
   
-  verifyColour(colour: string):void {
+  public verifyColour(colour: string):void {
     if (this.done) {
     this.playerChose.push(colour);
       if (this.playerChose[this.playerChose.length - 1] == this.chose[this.playerChose.length - 1]) {
@@ -91,11 +91,11 @@ export class LevelCComponent {
     }
   }
   
-  back():void {
+  public back():void {
     this.router.navigate([''])
   }
   
-  endGame():void {
+  private endGame():void {
     this.gameService.setRound(this.round);
     this.gameService.addGame();
     this.router.navigate(['lost'])

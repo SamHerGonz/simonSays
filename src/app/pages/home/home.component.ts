@@ -15,12 +15,12 @@ export class HomeComponent {
   private router = inject(Router);
   private gameService = inject(GameService);
   
-  maxLevel = 3; //Last existing level
+  maxLevel = 4; //Last existing level
   user = this.gameService.getName();
   level = 1;
   colours: string[] = [];
 
-  play(): void {
+  public play(): void {
     if (this.user.length < 3 || this.user.length > 18) {
       alert("The username has to be between 3 and 18 characters");
     }
@@ -32,16 +32,16 @@ export class HomeComponent {
     }
   }
 
-  options(): void {
+  public options(): void {
     alert("Coming soon!")
     // this.router.navigate(['options'])
   }
 
-  lateboard(): void {
+  public lateboard(): void {
     this.router.navigate(['lateboard'])
   }
 
-  gotoLevelLeft(): void {
+  public gotoLevelLeft(): void {
     if (this.level === 1) {
       this.gotoLevel(this.maxLevel);
     }
@@ -50,7 +50,7 @@ export class HomeComponent {
     }
   }
 
-  gotoLevelRight(): void {
+  public gotoLevelRight(): void {
     if (this.level === this.maxLevel) {
       this.gotoLevel(1);
     }

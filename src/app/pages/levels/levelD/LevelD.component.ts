@@ -5,32 +5,26 @@ import { NgClass } from '@angular/common';
 import { GameService } from '../../../services/game.service';
 
 @Component({
-  selector: 'app-level2',
+  selector: 'app-level4',
   standalone: true,
   imports: [ButtonsComponent, NgClass],
-  templateUrl: './levelB.component.html',
-  styleUrls: ['./levelB.component.scss', '../levels.scss'],
-  
+  templateUrl: './levelD.component.html',
+  styleUrls: ['./levelD.component.scss', '../levels.scss'],
 })
-export class LevelBComponent {
-ngOnInit(): void {
+export class LevelDComponent {
+  ngOnInit(): void {
     this.startRound();
   }
   private router = inject(Router);
   private gameService = inject(GameService);
 
-  // All the buttons are set as childs
-  @ViewChild('colRed',{static: true}) button1!: ButtonsComponent;
-  @ViewChild('colOrange',{static: true}) button2!: ButtonsComponent;
-  @ViewChild('colBlue',{static: true}) button3!: ButtonsComponent;
-  @ViewChild('colPurple',{static: true}) button4!: ButtonsComponent;
-  @ViewChild('colYellow',{static: true}) button5!: ButtonsComponent;
-  @ViewChild('colLime',{static: true}) button6!: ButtonsComponent;
-  @ViewChild('colGreen',{static: true}) button7!: ButtonsComponent;
-  @ViewChild('colPalegreen',{static: true}) button8!: ButtonsComponent;
-
-  // @ViewChild(ButtonsComponent) button!: ButtonsComponent;
-  colours: string[] = ['red','orange','blue','purple','yellow','lime','green','palegreen'];
+  @ViewChild('colRed',{static: true}) buttonRed!: ButtonsComponent;
+  @ViewChild('colBlue',{static: true}) buttonBlue!: ButtonsComponent;
+  @ViewChild('colYellow',{static: true}) buttonYellow!: ButtonsComponent;
+  @ViewChild('colGreen',{static: true}) buttonGreen!: ButtonsComponent;
+  
+    // @ViewChild(ButtonsComponent) button!: ButtonsComponent;
+  colours: string[] = ['red', 'blue','yellow','green'];
   chose: string[] = [];
   playerChose: string[] = [];
   done:boolean = false
@@ -52,36 +46,22 @@ ngOnInit(): void {
   private addColour():void {
     this.chose.push(this.colours[Math.floor(Math.random() * this.colours.length)]);
   }
-
+  
   private showColours():void {
     this.chose.forEach ((element, index) => {
       setTimeout(() => {
-        // Verifies which colour to show
-        if (element === this.button1.colour) {
-          this.button1.light()
+        if (element === this.buttonRed.colour) {
+          this.buttonRed.light()
         }
-        if (element === this.button2.colour) {
-          this.button2.light()
+        if (element === this.buttonBlue.colour) {
+          this.buttonBlue.light()
         }
-        if (element === this.button3.colour) {
-          this.button3.light()
+        if (element === this.buttonYellow.colour) {
+          this.buttonYellow.light()
         }
-        if (element === this.button4.colour) {
-          this.button4.light()
+        if (element === this.buttonGreen.colour) {
+          this.buttonGreen.light()
         }
-        if (element === this.button5.colour) {
-          this.button5.light()
-        }
-        if (element === this.button6.colour) {
-          this.button6.light()
-        }
-        if (element === this.button7.colour) {
-          this.button7.light()
-        }
-        if (element === this.button8.colour) {
-          this.button8.light()
-        }
-
         if (index === this.chose.length - 1) {
           this.done = true;
         }
@@ -94,7 +74,7 @@ ngOnInit(): void {
       ButtonsComponent.time -= 25
     }
   }
-
+  
   public verifyColour(colour: string):void {
     if (this.done) {
     this.playerChose.push(colour);
@@ -110,11 +90,11 @@ ngOnInit(): void {
       }
     }
   }
-
+  
   public back():void {
     this.router.navigate([''])
   }
-
+  
   private endGame():void {
     this.gameService.setRound(this.round);
     this.gameService.addGame();

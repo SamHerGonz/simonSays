@@ -37,6 +37,12 @@ export const routes: Routes = [
             m => m.LevelCComponent,
         ),
     },
+        {
+        path: 'level4',
+        loadComponent: () => import('./pages/levels/levelD/LevelD.component').then(
+            m => m.LevelDComponent,
+        ),
+    },
     {
         path: 'lost',
         loadComponent: () => import('./pages/lost/lost.component').then(
