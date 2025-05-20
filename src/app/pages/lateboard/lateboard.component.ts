@@ -12,10 +12,10 @@ import { Router } from '@angular/router';
 export class LateboardComponent {
   private router = inject(Router);
   gameService = inject(GameService);
-  n: number = 1;
+  choseLevel: number = 1;
 
   public showLevel(level: number): void {
-    this.n = level
+    this.choseLevel = level
   }
 
   public home(): void {

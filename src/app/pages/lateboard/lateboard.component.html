@@ -11,10 +11,10 @@
         <th>Users:</th>
         <th>Points:</th>
     </tr>
-    @for (user of gameService.getLateboardUser(this.n); track user) {
+    @for (user of gameService.getLateboardUser(this.choseLevel); track user) {
         <tr>
             <td>{{ user }}</td>
-            <td>{{gameService.getLateboardRound(this.n)[$index]}}</td>
+            <td>{{gameService.getLateboardRound(this.choseLevel)[$index]}}</td>
         </tr>
     }
 </table>
