@@ -21,8 +21,8 @@ export class HomeComponent {
   colours: string[] = [];
 
   public play(): void {
-    if (this.user.length < 3 || this.user.length > 18) {
-      alert("The username has to be between 3 and 18 characters");
+    if (this.user.length < 3 || this.user.length > 18 || this.user.includes(" ")) {
+      alert("The username has to be between 3 and 18 characters and can't contain spaces");
     }
     else {
       this.gameService.setName(this.user);
