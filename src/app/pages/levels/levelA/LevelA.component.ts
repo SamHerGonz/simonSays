@@ -72,7 +72,7 @@ export class LevelAComponent implements OnInit{
     if (this.maxtime < this.time) {
       this.time -= 50;
     }
-    if (ButtonsComponent.time < 75 && this.round % 3 == 0) {
+    if (ButtonsComponent.time < 75 && this.round % 3 === 0) {
       ButtonsComponent.time -= 25
     }
   }

@@ -59,7 +59,7 @@ export class GameService {
         break;
       }
     }
-    if (position == this.lateboardRound[this.level - 1].length) {
+    if (position === this.lateboardRound[this.level - 1].length) {
       this.lateboardUser[this.level - 1].push(this.name);
       this.lateboardRound[this.level - 1].push(this.round);
     }

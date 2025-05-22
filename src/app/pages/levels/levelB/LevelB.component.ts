@@ -90,7 +90,7 @@ ngOnInit(): void {
     if (this.maxtime < this.time) {
       this.time -= 50;
     }
-    if (ButtonsComponent.time < 75 && this.round % 3 == 0) {
+    if (ButtonsComponent.time < 75 && this.round % 3 === 0) {
       ButtonsComponent.time -= 25
     }
   }
@@ -98,8 +98,8 @@ ngOnInit(): void {
   public verifyColour(colour: string):void {
     if (this.done) {
     this.playerChose.push(colour);
-      if (this.playerChose[this.playerChose.length - 1] == this.chose[this.playerChose.length - 1]) {
-        if (this.playerChose.length == this.chose.length) {
+      if (this.playerChose[this.playerChose.length - 1] === this.chose[this.playerChose.length - 1]) {
+        if (this.playerChose.length === this.chose.length) {
           this.isComplete = true;
           this.done = false;
           this.startRound();
